@@ -1,0 +1,241 @@
+title: Article
+fields:
+  -
+    handle: article
+    field:
+      buttons:
+        - h1
+        - h2
+        - h3
+        - h4
+        - h5
+        - h6
+        - bold
+        - italic
+        - unorderedlist
+        - orderedlist
+        - quote
+        - removeformat
+        - anchor
+        - color
+        - small
+        - superscript
+        - subscript
+        - horizontalrule
+        - underline
+        - alignleft
+        - aligncenter
+        - alignright
+        - alignjustify
+      save_html: false
+      toolbar_mode: fixed
+      link_noopener: false
+      link_noreferrer: false
+      target_blank: false
+      reading_time: true
+      fullscreen: true
+      allow_source: true
+      type: bard
+      localizable: true
+      listable: hidden
+      display: Article
+      replicator_preview: false
+      validate:
+        - required
+      sets:
+        interactive:
+          display: Interactive
+          instructions: 'Interactive sets.'
+          icon: programming-script-code
+          sets:
+            buttons:
+              display: Buttons
+              instructions: 'Add one or multiple buttons.'
+              icon: link
+              fields:
+                -
+                  import: buttons
+            form:
+              display: Form
+              instructions: null
+              icon: form-text-field
+              fields:
+                -
+                  handle: form
+                  field: form.form
+                  config:
+                    validate:
+                      - required
+            carousel:
+              display: Carousel
+              instructions: null
+              icon: layout-carousel-horizontal
+              fields:
+                -
+                  import: carousel
+            related_entry:
+              display: 'Related Entry'
+              instructions: null
+              icon: media-news-paper
+              fields:
+                -
+                  import: related_entry
+            card:
+              display: Card
+              instructions: null
+              icon: content-book-open
+              fields:
+                -
+                  import: card
+            navigation:
+              display: Navigation
+              instructions: null
+              icon: hierarchy-vertical-nav-flow
+              fields:
+                -
+                  import: navigation
+            collapse:
+              display: Collapse
+              instructions: null
+              icon: form-drop-down-menu
+              fields:
+                -
+                  handle: collapse_menu
+                  field:
+                    collapse: false
+                    previews: true
+                    fullscreen: true
+                    sets:
+                      new_set_group:
+                        display: 'New Set Group'
+                        instructions: null
+                        icon: null
+                        sets:
+                          collapsible_element:
+                            display: 'New collapsible element'
+                            instructions: null
+                            icon: layout-flip-down
+                            fields:
+                              -
+                                import: collapse
+                    type: replicator
+                    display: 'Collapse Menu'
+                    icon: replicator
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+            member_card:
+              display: 'Member Card'
+              instructions: null
+              icon: id-face-scan
+              fields:
+                -
+                  import: member_profile
+            members_grid:
+              display: 'Members Grid'
+              instructions: null
+              icon: dashboard-layout
+              fields:
+                -
+                  handle: members_grid
+                  field:
+                    collapse: false
+                    previews: true
+                    fullscreen: true
+                    sets:
+                      new_set_group:
+                        display: 'New Set Group'
+                        instructions: null
+                        icon: null
+                        sets:
+                          member_card:
+                            display: 'New member card'
+                            instructions: null
+                            icon: id-face-scan
+                            fields:
+                              -
+                                import: member_profile
+                    type: replicator
+                    display: 'Members Grid'
+                    icon: replicator
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+            callout_box:
+              display: 'Callout Box'
+              instructions: null
+              icon: alert-warning-exclamation-mark
+              fields:
+                -
+                  import: callout_box
+        text:
+          display: Text
+          instructions: 'Text based sets.'
+          icon: text-formatting-initial-letter
+          sets:
+            pull_quote:
+              display: 'Pull quote'
+              instructions: 'Add a pull quote with an optional author.'
+              icon: text-formatting-quotation
+              fields:
+                -
+                  import: pull_quote
+            table:
+              display: Table
+              instructions: 'Add a data table with headers, rows and columns.'
+              icon: layout-grid-dots
+              fields:
+                -
+                  import: table
+            advanced_horizontal_rule:
+              display: 'Advanced Horizontal Rule'
+              instructions: null
+              icon: layout-header
+              fields:
+                -
+                  import: advanced_horizontal_rule
+            macrotext:
+              display: Macrotext
+              instructions: null
+              icon: text-formatting-all-caps
+              fields:
+                -
+                  import: macrotext
+        image_video:
+          display: 'Image & video'
+          instructions: 'Sets with images or embeddable video''s.'
+          icon: media-image-camera
+          sets:
+            image:
+              display: Image
+              instructions: 'Add a single image with an optional caption.'
+              icon: media-image-picture-orientation
+              fields:
+                -
+                  import: image
+            video:
+              display: Video
+              instructions: 'Add a YouTube or Vimeo video with an optional caption.'
+              icon: media-webcam-video
+              fields:
+                -
+                  import: video
+      container: files
+      enable_input_rules: true
+      enable_paste_rules: true
+      instructions_position: above
+      visibility: visible
+      always_save: false
+      previews: true
+      antlers: false
+      remove_empty_nodes: trim
+      collapse: false
+      smart_typography: true
+      inline: false
+      hide_display: false
+      word_count: false
+      always_show_set_button: false

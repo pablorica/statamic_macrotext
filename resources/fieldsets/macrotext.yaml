@@ -1,0 +1,48 @@
+title: Macrotext
+fields:
+  -
+    handle: title
+    field: common.text_rich
+    config:
+      buttons:
+        - bold
+        - italic
+        - removeformat
+        - superscript
+        - subscript
+        - anchor
+        - alignleft
+        - aligncenter
+        - alignright
+        - alignjustify
+        - color
+      display: Title
+  -
+    handle: size
+    field:
+      options:
+        xl: null
+        2xl: null
+        3xl: null
+        4xl: null
+        5xl: null
+        6xl: null
+        7xl: null
+        8xl: null
+        9xl: null
+        10xl: null
+      taggable: false
+      push_tags: false
+      multiple: false
+      clearable: false
+      searchable: true
+      cast_booleans: false
+      default: 6xl
+      type: select
+      display: Size
+      icon: select
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false

@@ -1,0 +1,30 @@
+{{#
+    @name Macrotext
+    @desc The text component for big font size styled text from Bard.
+    @param title The text to display.
+    @param size The size of the text.
+#}}
+
+<!-- /components/_macrotext.antlers.html -->
+{{#
+    md:text-xl
+    md:text-1xl
+    md:text-2xl
+    md:text-3xl
+    md:text-4xl
+    md:text-5xl
+    md:text-6xl
+    md:text-7xl
+    md:text-8xl
+    md:text-9xl
+#}}
+
+{{ textclass = "text-4xl md:text-6xl" }}
+{{ if size }}
+    {{ textclass = "text-4xl md:text-"+size }}
+{{ /if }}
+
+<div class="{{ textclass }}">
+    {{ title }}
+</div>
+<!-- End: /components/_macrotext.antlers.html -->
